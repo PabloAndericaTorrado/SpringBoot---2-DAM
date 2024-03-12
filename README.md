@@ -26,7 +26,7 @@ Este proyecto es una aplicación SpringBoot para la gestión de un concesionario
 ### Tecnologías Utilizadas
 
 - SpringBoot para el backend.
-- HTML, CSS, y JavaScript para el frontend.
+- HTML, CSS, Tailwind y JavaScript para el frontend.
 - Base de datos relacional para el almacenamiento de datos.
 
 ## Instalación y Configuración
