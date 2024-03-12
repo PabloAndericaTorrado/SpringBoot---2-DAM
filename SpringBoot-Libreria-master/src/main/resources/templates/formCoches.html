@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body class="bg-gray-800">
+
+<header th:replace="layout/layout :: header"></header>
+
+<div class="container mx-auto py-8">
+    <div class="bg-white shadow-md rounded-lg p-6">
+        <h3 class="text-lg font-bold text-gray-800 mb-4" th:text="${titulo}"></h3>
+        <form th:action="@{/formCoches}" th:object="${coche}" method="post" enctype="multipart/form-data">
+            <div class="mb-6">
+                <label for="marca" class="block text-gray-700 text-sm font-bold mb-2 transition duration-300 transform hover:scale-105">Marca</label>
+                <input type="text" th:field="*{marca}" id="marca" class="form-control shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out" placeholder="Ingrese la marca" 
+                       onmouseover="this.style.backgroundColor='#f0f0f0'; this.style.boxShadow='0 0 10px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.backgroundColor='transparent'; this.style.boxShadow='none'">
+            </div>
+            <div class="mb-6">
+                <label for="modelo" class="block text-gray-700 text-sm font-bold mb-2 transition duration-300 transform hover:scale-105">Modelo</label>
+                <input type="text" th:field="*{modelo}" id="modelo" class="form-control shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out" placeholder="Ingrese el modelo"
+                       onmouseover="this.style.backgroundColor='#f0f0f0'; this.style.boxShadow='0 0 10px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.backgroundColor='transparent'; this.style.boxShadow='none'">
+            </div>
+            <div class="mb-6">
+                <label for="anioFabricacion" class="block text-gray-700 text-sm font-bold mb-2 transition duration-300 transform hover:scale-105">Año de fabricación</label>
+                <input type="number" th:field="*{anioFabricacion}" id="anioFabricacion" class="form-control shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out" placeholder="Ingrese el año de fabricación"
+                       onmouseover="this.style.backgroundColor='#f0f0f0'; this.style.boxShadow='0 0 10px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.backgroundColor='transparent'; this.style.boxShadow='none'">
+            </div>
+            <div class="mb-6">
+                <label for="kilometraje" class="block text-gray-700 text-sm font-bold mb-2 transition duration-300 transform hover:scale-105">Kilometraje</label>
+                <input type="number" th:field="*{kilometraje}" id="kilometraje" class="form-control shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out" placeholder="Ingrese el kilometraje"
+                       onmouseover="this.style.backgroundColor='#f0f0f0'; this.style.boxShadow='0 0 10px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.backgroundColor='transparent'; this.style.boxShadow='none'">
+            </div>
+            <div class="mb-6">
+                <label for="precio" class="block text-gray-700 text-sm font-bold mb-2 transition duration-300 transform hover:scale-105">Precio</label>
+                <input type="number" th:field="*{precio}" id="precio" class="form-control shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out" placeholder="Ingrese el precio"
+                       onmouseover="this.style.backgroundColor='#f0f0f0'; this.style.boxShadow='0 0 10px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.backgroundColor='transparent'; this.style.boxShadow='none'">
+            </div>
+            <div class="mb-6">
+                <label for="matricula" class="block text-gray-700 text-sm font-bold mb-2 transition duration-300 transform hover:scale-105">Matrícula</label>
+                <input type="text" th:field="*{matricula}" id="matricula" class="form-control shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out" placeholder="Ingrese la matrícula"
+                       onmouseover="this.style.backgroundColor='#f0f0f0'; this.style.boxShadow='0 0 10px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.backgroundColor='transparent'; this.style.boxShadow='none'">
+            </div>
+            <div class="mb-6">
+                <label for="foto" class="block text-gray-700 text-sm font-bold mb-2 transition duration-300 transform hover:scale-105">Foto</label>
+                <input type="text" th:field="*{foto}" name="text" id="foto" class="form-control shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"  placeholder="Ingrese el link de la Imagen">
+            </div>
+            <div class="mb-6">
+                <label for="fecha" class="block text-gray-700 text-sm font-bold mb-2 transition duration-300 transform hover:scale-105">Fecha</label>
+                <input type="date" th:field="*{createAt}" id="fecha" class="form-control shadow-sm appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-300 ease-in-out"
+                       onmouseover="this.style.backgroundColor='#f0f0f0'; this.style.boxShadow='0 0 10px rgba(0, 0, 0, 0.2)'" onmouseout="this.style.backgroundColor='transparent'; this.style.boxShadow='none'">
+            </div>
+            <br/>
+        <div class="fixed flex justify-center mb-4">
+    <button type="submit" class="inline-flex items-center px-2 py-1 bg-blue-500 text-blue-50 rounded-md cursor-pointer hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+        <span class="mr-1">Crear Coche</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-2 h-2 inline-block">
+            <path fill-rule="evenodd" d="M10 3a.75.75 0 01.75.75V11h6a.75.75 0 010 1.5h-6v6a.75.75 0 01-1.5 0v-6H3a.75.75 0 010-1.5h6V3.75A.75.75 0 0110 3z" clip-rule="evenodd" />
+        </svg>
+    </button>
+</div>
+
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

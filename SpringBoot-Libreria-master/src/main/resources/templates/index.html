@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Concesionario de Segunda Mano</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Agregar estilos personalizados aquí si es necesario */
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-900 to-gray-900 text-white">
+
+<!-- Navbar -->
+<header id="navbar" class="fixed top-0 w-full bg-gray-800 text-white py-4 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-3xl font-bold">Concesionario de Segunda Mano</h1>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="/index" class="hover:text-gray-300 transition duration-300">Home</a></li>
+                <li><a href="/listar" class="hover:text-gray-300 transition duration-300">Clientes</a></li>
+                <li><a href="/listarCoches" class="hover:text-gray-300 transition duration-300">Coches</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section text-center py-16 mt-20">
+    <div class="container mx-auto">
+        <h1 class="text-5xl font-bold mb-4 animate-bounce">¡Bienvenido a Nuestro Concesionario!</h1>
+        <p class="text-lg mb-8 animate-pulse">Descubre vehículos de calidad a precios increíbles.</p>
+        <a href="/listarCoches" class="btn btn-primary animate-bounce bg-yellow-400 hover:bg-yellow-500 py-3 px-6 rounded-full transition duration-300">Explorar Catálogo</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section py-16 bg-gray-900 text-white">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-8 md:space-x-8">
+        <div class="md:w-1/2 text-center md:text-left">
+            <h2 class="text-4xl font-bold mb-4">¿Quiénes Somos?</h2>
+            <p class="text-lg mb-4">Somos tu mejor opción para adquirir vehículos de segunda mano en excelente estado y a precios asequibles.</p>
+            <p class="text-lg mb-4">Nuestro compromiso es ofrecerte la mejor experiencia y garantía en cada compra.</p>
+        </div>
+        <div class="md:w-1/2">
+              <img th:src="@{/images/concesionario.jpg}" alt="About Image" class="rounded-lg shadow-lg">
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer bg-gray-800 text-white py-4">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2024 Tu Concesionario de Segunda Mano</p>
+    </div>
+</footer>
+
+<!-- Script para fijar el navbar -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        window.addEventListener('scroll', function () {
+            var navbar = document.getElementById('navbar');
+            if (window.scrollY > 0) {
+                navbar.classList.add('bg-opacity-90');
+            } else {
+                navbar.classList.remove('bg-opacity-90');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

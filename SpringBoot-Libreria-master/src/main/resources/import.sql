@@ -1,0 +1,38 @@
+/* Populate tables */
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Pablo', 'Andérica', 'pabloat@iescastelar.com', '2023-08-01', 'https://randomuser.me/api/portraits/men/1.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Carlos', 'Martínez', 'carlos.martinez@gmail.com', '2022-08-02', 'https://randomuser.me/api/portraits/women/2.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Juan', 'Martínez', 'juan.martinez@gmail.com', '2022-08-03', 'https://randomuser.me/api/portraits/men/3.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('María', 'García', 'maria.garcia@gmail.com', '2022-08-04', 'https://randomuser.me/api/portraits/women/4.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Roberto', 'Pérez', 'roberto.perez@gmail.com', '2022-08-05', 'https://randomuser.me/api/portraits/men/5.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Elena', 'López', 'elena.lopez@gmail.com', '2017-08-06', 'https://randomuser.me/api/portraits/women/6.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Ricardo', 'Hernández', 'ricardo.hernandez@gmail.com', '2017-08-07', 'https://randomuser.me/api/portraits/men/7.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Rafael', 'Díaz', 'rafael.diaz@gmail.com', '2017-08-08', 'https://randomuser.me/api/portraits/women/8.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('José', 'Gutiérrez', 'jose.gutierrez@gmail.com', '2017-08-09', 'https://randomuser.me/api/portraits/men/9.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Jaime', 'Ramírez', 'jaime.ramirez@gmail.com', '2017-08-10', 'https://randomuser.me/api/portraits/women/10.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Bruno', 'León', 'bruno.leon@gmail.com', '2017-08-11', 'https://randomuser.me/api/portraits/men/11.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('José', 'Sánchez', 'jose.sanchez@gmail.com', '2017-08-12', 'https://randomuser.me/api/portraits/women/12.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Juan', 'Rojas', 'juan.rojas@gmail.com', '2017-08-13', 'https://randomuser.me/api/portraits/men/13.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Ana', 'Gómez', 'ana.gomez@gmail.com', '2017-08-14', 'https://randomuser.me/api/portraits/women/14.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Roberto', 'Díaz', 'roberto.diaz@gmail.com', '2017-08-15', 'https://randomuser.me/api/portraits/men/15.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Javier', 'Rojas', 'javier.rojas@gmail.com', '2017-08-16', 'https://randomuser.me/api/portraits/women/16.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Pedro', 'González', 'pedro.gonzalez@gmail.com', '2017-08-17', 'https://randomuser.me/api/portraits/men/17.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Sergio', 'Navarro', 'sergio.navarro@gmail.com', '2017-08-18', 'https://randomuser.me/api/portraits/women/18.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Santiago', 'Vidal', 'santiago.vidal@gmail.com', '2017-08-19', 'https://randomuser.me/api/portraits/men/19.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Luis', 'Alvarez', 'luis.alvarez@gmail.com', '2017-08-20', 'https://randomuser.me/api/portraits/women/20.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Sara', 'Rojas', 'sara.rojas@gmail.com', '2017-08-21', 'https://randomuser.me/api/portraits/men/1.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Javier', 'Suárez', 'javier.suarez@gmail.com', '2017-08-22', 'https://randomuser.me/api/portraits/women/2.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Joaquín', 'López', 'joaquin.lopez@gmail.com', '2017-08-23', 'https://randomuser.me/api/portraits/men/3.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Juan', 'Sanz', 'juan.sanz@gmail.com', '2017-08-24', 'https://randomuser.me/api/portraits/women/4.jpg');
+INSERT INTO clientes (nombre, apellido, email, create_at, foto) VALUES('Roberto', 'Rojas', 'roberto.rojas@gmail.com', '2017-08-25', 'https://randomuser.me/api/portraits/men/5.jpg');
+
+
+INSERT INTO coches (marca, modelo, anio_fabricacion, kilometraje, precio, matricula, create_at,foto) VALUES ('Toyota', 'Corolla', 2019, 30000, 15000.00, 'ABC123', '2017-08-25','https://www.flexicar.es/images/903000000072115/2373LND_01_front-right-1440x856.jpg');
+INSERT INTO coches (marca, modelo, anio_fabricacion, kilometraje, precio, matricula, create_at,foto) VALUES ('Honda', 'Civic', 2018, 25000, 18000.00, 'XYZ456', '2017-08-25','https://images0.autocasion.com/unsafe/820x461/ad/13/1001/3e9901767de90ad1f6381b198665945fef6f5d19.jpeg');
+INSERT INTO coches (marca, modelo, anio_fabricacion, kilometraje, precio, matricula, create_at,foto) VALUES ('Ford', 'Focus', 2020, 10000, 20000.00, 'DEF789', '2017-08-25','https://images0.autocasion.com/unsafe/820x461/ad/10/1988/bd3946deebe9f27d887354b5fc250affb6c68a46.jpeg');
+INSERT INTO coches (marca, modelo, anio_fabricacion, kilometraje, precio, matricula, create_at,foto) VALUES ('Volkswagen', 'Golf', 2017, 40000, 17000.00, 'GHI012', '2017-08-25','https://images0.autocasion.com/unsafe/820x461/ad/12/1905/219577e1a161f7b2d3c2c2055fe0ad9481c41841.jpeg');
+INSERT INTO coches (marca, modelo, anio_fabricacion, kilometraje, precio, matricula, create_at,foto) VALUES ('Chevrolet', 'Cruze', 2019, 35000, 16000.00, 'JKL345', '2017-08-25','https://images0.autocasion.com/unsafe/820x461/ad/1223/14/8627101/8627101-0-2073902673657ac1c67d1fe4.86026903.jpeg');
+INSERT INTO coches (marca, modelo, anio_fabricacion, kilometraje, precio, matricula, create_at,foto) VALUES ('Toyota', 'Yaris', 2017, 20000, 12000.00, 'MNO678', '2017-08-25','https://images0.autocasion.com/unsafe/820x461/ad/0124/30/11805886/11805886-0-240913149965b9492e656d00.18803612.jpeg');
+INSERT INTO coches (marca, modelo, anio_fabricacion, kilometraje, precio, matricula, create_at,foto) VALUES ('Nissan', 'GT-R', 2018, 18000, 15000.00, 'PQR901', '2017-08-25','https://images0.autocasion.com/unsafe/820x461/ad/03/1827/c9015f9735f3f87d5c1443b054a02388cfd51f11.jpeg');
+INSERT INTO coches (marca, modelo, anio_fabricacion, kilometraje, precio, matricula, create_at,foto) VALUES ('Hyundai', 'Elantra', 2021, 5000, 22000.00, 'STU234', '2017-08-25','https://images0.autocasion.com/unsafe/820x461/ad/06/1766/fae0c7450ecbcebbecabb84c5e43ee331c0ce728.jpeg');
+INSERT INTO coches (marca, modelo, anio_fabricacion, kilometraje, precio, matricula, create_at,foto) VALUES ('Honda', 'Accord', 2019, 25000, 18000.00, 'VWX567', '2017-08-25','https://images0.autocasion.com/unsafe/820x461/ad/0124/24/11931299/11931299-0-280928989965b0adeabd9749.75494343.jpeg');
+INSERT INTO coches (marca, modelo, anio_fabricacion, kilometraje, precio, matricula, create_at,foto) VALUES ('Ford', 'Fusion', 2017, 30000, 16000.00, 'YZA890', '2017-08-25','https://images0.autocasion.com/unsafe/820x461/ad/06/1572/098ff96e825355cf620719b12134f79b44d90315.jpeg');
