@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/layout :: head">
+    <style>
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animate-slide-in {
+            animation: slideIn 0.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        
+    </style>
+</head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css" rel="stylesheet">
+
+<body class="bg-gray-50 animate-fade-in">
+
+    <header th:replace="layout/layout :: header"></header>
+
+    <div class="container mx-auto px-4 py-12">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden animate-slide-in">
+            <div class="px-6 py-4 bg-blue-800 text-white text-lg font-semibold rounded-t-xl">Crear/Editar Cliente</div>
+            <div class="p-6 bg-white">
+                <div th:object="${cliente}" th:remove="tag">
+                    <ul th:if="${#fields.hasErrors('*')}" class="p-4 mb-4 bg-red-200 text-red-700 border-l-4 border-red-600 rounded">
+                        <li th:each="err: ${#fields.errors('*')}" th:text="${err}">Error</li>
+                    </ul>
+                </div>
+                <form th:action="@{/form}" th:object="${cliente}" method="post" enctype="multipart/form-data" class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">Nombre</label>
+                            <input type="text" th:field="*{nombre}" class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-blue-500 transition duration-300 ease-in-out" />
+                            <small class="text-red-600" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></small>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="apellido">Apellido</label>
+                            <input type="text" th:field="*{apellido}" class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-blue-500 transition duration-300 ease-in-out" />
+                            <small class="text-red-600" th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"></small>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                        <input type="email" th:field="*{email}" class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-blue-500 transition duration-300 ease-in-out" />
+                        <small class="text-red-600" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></small>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="createAt">Fecha</label>
+                        <input type="date" th:field="*{createAt}" class="appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-blue-500 transition duration-300 ease-in-out" />
+                        <small class="text-red-600" th:if="${#fields.hasErrors('createAt')}" th:errors="*{createAt}"></small>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="foto">Foto</label>
+							<input type="file" name="file" class="form-control" />
+                    </div>
+                    <div class="flex justify-start mt-6">
+                        <input type="submit" value="Crear Cliente" class="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-300 ease-in-out" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer th:replace="layout/layout :: footer"></footer>
+</body>
+
+</html>
